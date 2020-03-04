@@ -1,0 +1,27 @@
+﻿@model HomeDetailsViewModel
+@{
+    ViewData["Title"] = "Details";
+    var photoPath = "/img/" + (@Model.Student.PhotoPath ?? "photo.jpg");
+}
+
+    <div class="row justify-content-center m-3">
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-header"><h1>@Model.Student.FirstName @Model.Student.LastName</h1></div>
+                <div class="card-body text-center">
+                    <img class="card-img-top imgThumbnail" src="@photoPath" alt="Photo" />
+                    <h4>Student Id: @Model.Student.Id</h4>
+                    <h4>Name: @Model.Student.FirstName @Model.Student.LastName</h4>
+                    <h4>Email: @Model.Student.Email</h4>
+                    <h4>Class Name: @Model.Student.ClassName</h4>
+                </div>
+                <div class="card-footer text-center">
+                    <a class="btn btn-primary text-white" asp-controller="home" asp-action="index">Back</a>
+                    <a class="btn btn-primary text-white" asp-controller="home" asp-action="edit" asp-route-id="@Model.Student.Id">Edit</a>
+                    <a class="btn btn-danger text-white" asp-controller="home" asp-action="delete" asp-route-id="@Model.Student.Id">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
