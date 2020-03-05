@@ -4,9 +4,9 @@
         {
             var photoPath = "/img/" + (student.PhotoPath??"photo.jpg");
             <div class="card m-3">
-                <div class="card-header"><h3>@student.FirstName @student.LastName</h3></div>
+                <div class="card-header"><h4>@student.FirstName @student.LastName</h4></div>
                 <div class="card-body">
-                    <img class="card-img-top imgThumbnail" src="@photoPath" alt="Alternate Text" />
+                    <img class="card-img-top" src="@photoPath" alt="Alternate Text" />
                 </div>
                 <div class="card-footer text-center">
                     <a class="btn btn-primary text-white" asp-controller="home" asp-action="details" asp-route-id="@student.Id">Details</a>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Repeat.Models
 {
@@ -10,11 +6,11 @@ namespace Repeat.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Please enter name"), MaxLength(50, ErrorMessage = "Name length cannot over 50")]
+        [Required(ErrorMessage = "Please enter first name"), MaxLength(50, ErrorMessage = "Name length cannot over 50")]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage = "Please enter name"), MaxLength(50, ErrorMessage = "Name length cannot over 50")]
+        [Required(ErrorMessage = "Please enter last name"), MaxLength(50, ErrorMessage = "Name length cannot over 50")]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 

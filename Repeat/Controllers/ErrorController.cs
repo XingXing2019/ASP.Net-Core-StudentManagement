@@ -14,7 +14,7 @@ namespace Repeat.Controllers
             switch (statusCode)
             {
                 case 404:
-                    ViewBag.ErrorMessage = "Page Not Exist";
+                    ViewBag.ErrorMessage = "The requested page was not found on this server.";
                     break;
             }
 

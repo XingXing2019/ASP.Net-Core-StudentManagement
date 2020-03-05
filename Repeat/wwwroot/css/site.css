@@ -71,6 +71,7 @@ body {
 }
 
 .imgThumbnail {
-    height: 100px;
+    height: 200px;
     width: auto;
+    text-align: center;
 }

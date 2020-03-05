@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 namespace Repeat.Models
@@ -44,8 +42,7 @@ namespace Repeat.Models
 
         public Student Update(Student updateStudent)
         {
-            var student = _context.Attach(updateStudent);
-            student.State = EntityState.Modified;
+            _context.Update(updateStudent);
             _context.SaveChanges();
             return updateStudent;
         }
